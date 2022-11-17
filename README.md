@@ -5,4 +5,15 @@
 Developed a full stack E-commerce website with fault-tolerance
 ## Technology
 ---
-- abc
+### Frontend
+- React
+- JavaScript
+### Function
+- Amazon Cognito
+- Lambda
+- Stripe
+### Backend
+#### Cache
+- DynamoDB Accelerator (DAX)
+#### Database
+- DynamoDB

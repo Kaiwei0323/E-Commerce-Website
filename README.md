@@ -2,6 +2,7 @@
 ---
 ## Introduction
 ---
-Developed a full stack E-commerce website with load-balancer
+Developed a full stack E-commerce website with fault-tolerance
 ## Technology
-
+---
+- abc

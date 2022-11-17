@@ -22,4 +22,4 @@ Developed a full stack E-commerce website with fault-tolerance
 - DynamoDB
 ### Architecture Diagram
 ---
-![Untitled drawing](https://user-images.githubusercontent.com/91507316/202378492-7dec5b0f-1965-4a68-92e2-b882a42dfc91.png)
+![Untitled drawing (1)](https://user-images.githubusercontent.com/91507316/202379541-bb2b7f31-ba14-4cbd-ae8f-1fcce2fdb340.png)

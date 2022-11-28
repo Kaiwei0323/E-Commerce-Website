@@ -1,20 +1,10 @@
 const { v4: uuidv4 } = require("uuid");
 const AWS = require("aws-sdk");
-const AmazonDaxClient = require("amazon-dax-client");
-//const documentClient = new AWS.DynamoDB.DocumentClient();
+const documentClient = new AWS.DynamoDB.DocumentClient();
 
-const dax = new AmazonDaxClient({
-    endpoints:['daxs://dax-cluster.4gylq2.dax-clusters.us-east-1.amazonaws.com'],
-    region:'us-east-1'
-});
-
-const documentClient = new AWS.DynamoDB.DocumentClient({
-  service: dax
-});
-
-const ORDER_TABLE = "Order-5hniyzzenjfmbedv5e4gx4h74m-prod";
+const ORDER_TABLE = "Order-b5qnaowscrfinbmojdssic2unu-prod";
 const ORDER_TYPE = "Order";
-const BOOK_ORDER_TABLE = "BookOrder-5hniyzzenjfmbedv5e4gx4h74m-prod";
+const BOOK_ORDER_TABLE = "BookOrder-b5qnaowscrfinbmojdssic2unu-prod";
 const BOOK_ORDER_TYPE = "BookOrder";
 
 const createOrder = async (payload) => {

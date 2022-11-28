@@ -1,16 +1,14 @@
 {
-  "version": "1",
-  "cognitoConfig": {
-    "identityPoolName": "mybookstore771eed31_identitypool_771eed31",
+    "identityPoolName": "mybookstore900d93e6_identitypool_900d93e6",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "mybook771eed31",
-    "userPoolName": "mybookstore771eed31_userpool_771eed31",
+    "resourceNameTruncated": "mybook900d93e6",
+    "userPoolName": "mybookstore900d93e6_userpool_900d93e6",
     "autoVerifiedAttributes": [
-      "email"
+        "email"
     ],
     "mfaConfiguration": "OFF",
     "mfaTypes": [
-      "SMS Text Message"
+        "SMS Text Message"
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
@@ -20,40 +18,34 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-      "email"
+        "email"
     ],
-    "aliasAttributes": [],
-    "userpoolClientGenerateSecret": false,
+    "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
-      "email"
+        "email"
     ],
     "userpoolClientReadAttributes": [
-      "email"
+        "email"
     ],
-    "userpoolClientLambdaRole": "mybook771eed31_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "mybook900d93e6_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "771eed31",
-    "resourceName": "mybookstore771eed31",
+    "sharedId": "900d93e6",
+    "resourceName": "mybookstore900d93e6",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "default",
-    "userPoolGroupList": [],
-    "serviceName": "Cognito",
-    "usernameCaseSensitive": false,
-    "useEnabledMfas": true,
     "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
     },
     "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
     },
-    "breakCircularDependency": true,
+    "useDefault": "default",
+    "userPoolGroupList": [],
     "dependsOn": []
-  }
-}   
+}

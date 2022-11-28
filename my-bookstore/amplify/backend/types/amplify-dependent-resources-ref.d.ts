@@ -1,13 +1,13 @@
 export type AmplifyDependentResourcesAttributes = {
     "auth": {
-        "mybookstore771eed31": {
+        "mybookstore900d93e6": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
             "UserPoolId": "string",
-            "UserPoolArn": "string",
             "UserPoolName": "string",
             "AppClientIDWeb": "string",
-            "AppClientID": "string"
+            "AppClientID": "string",
+            "AppClientSecret": "string"
         }
     },
     "storage": {
@@ -34,6 +34,14 @@ export type AmplifyDependentResourcesAttributes = {
         "mybookstore": {
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "Region": "string",
+            "HostingBucketName": "string",
+            "WebsiteURL": "string",
+            "S3BucketSecureURL": "string"
         }
     }
 }

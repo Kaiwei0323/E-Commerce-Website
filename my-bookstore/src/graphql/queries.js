@@ -1,6 +1,50 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const getOrder = /* GraphQL */ `
+  query GetOrder($id: ID!) {
+    getOrder(id: $id) {
+      id
+      user
+      date
+      total
+      books {
+        items {
+          id
+          book_id
+          order_id
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listOrders = /* GraphQL */ `
+  query ListOrders(
+    $filter: ModelOrderFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listOrders(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        user
+        date
+        total
+        books {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
 export const getBook = /* GraphQL */ `
   query GetBook($id: ID!) {
     getBook(id: $id) {
@@ -11,8 +55,6 @@ export const getBook = /* GraphQL */ `
       author
       featured
       price
-      createdAt
-      updatedAt
       orders {
         items {
           id
@@ -20,10 +62,11 @@ export const getBook = /* GraphQL */ `
           order_id
           createdAt
           updatedAt
-          customer
         }
         nextToken
       }
+      createdAt
+      updatedAt
     }
   }
 `;
@@ -42,58 +85,11 @@ export const listBooks = /* GraphQL */ `
         author
         featured
         price
-        createdAt
-        updatedAt
         orders {
           nextToken
         }
-      }
-      nextToken
-    }
-  }
-`;
-export const getOrder = /* GraphQL */ `
-  query GetOrder($id: ID!) {
-    getOrder(id: $id) {
-      id
-      user
-      date
-      total
-      createdAt
-      updatedAt
-      books {
-        items {
-          id
-          book_id
-          order_id
-          createdAt
-          updatedAt
-          customer
-        }
-        nextToken
-      }
-      customer
-    }
-  }
-`;
-export const listOrders = /* GraphQL */ `
-  query ListOrders(
-    $filter: ModelOrderFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listOrders(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        user
-        date
-        total
         createdAt
         updatedAt
-        books {
-          nextToken
-        }
-        customer
       }
       nextToken
     }

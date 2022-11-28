@@ -9,7 +9,7 @@ import Error from "./pages/Error";
 import Books from "./pages/Books";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
-import OrderHistory from "./pages/OrderHistory";
+import Thankyou from "./pages/thankyou";
 import BookDetails from "./pages/BookDetails";
 import Admin from './pages/Admin';
 
@@ -35,11 +35,11 @@ const App = () => {
         <Route path="/checkout">
           <Checkout />
         </Route>
-        <Route path="/orderhistory">
-          <OrderHistory />
-        </Route>
         <Route exact path="/books">
           <Books />
+        </Route>
+        <Route exact path="/thankyou">
+          <Thankyou />
         </Route>
         <Route
           path="/books/:id"

@@ -7,10 +7,10 @@
       "Default": "NONE",
       "Description": " Schedule Expression"
     },
-    "deploymentBucketName": {
+    "env": {
       "Type": "String"
     },
-    "env": {
+    "deploymentBucketName": {
       "Type": "String"
     },
     "s3Key": {
@@ -35,14 +35,6 @@
         "aws:asset:property": "Code"
       },
       "Properties": {
-        "Code": {
-          "S3Bucket": {
-            "Ref": "deploymentBucketName"
-          },
-          "S3Key": {
-            "Ref": "s3Key"
-          }
-        },
         "Handler": "index.handler",
         "FunctionName": {
           "Fn::If": [
@@ -78,9 +70,17 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs14.x",
+        "Runtime": "nodejs12.x",
         "Layers": [],
-        "Timeout": 25
+        "Timeout": "25",
+        "Code": {
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": {
+            "Ref": "s3Key"
+          }
+        }
       }
     },
     "LambdaExecutionRole": {
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "mybookstoreLambdaRoleabd36bab",
+            "mybookstoreLambdaRole7e3c3db7",
             {
               "Fn::Join": [
                 "",
                 [
-                  "mybookstoreLambdaRoleabd36bab",
+                  "mybookstoreLambdaRole7e3c3db7",
                   "-",
                   {
                     "Ref": "env"

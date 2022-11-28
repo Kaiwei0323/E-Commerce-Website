@@ -17,7 +17,6 @@ const Books = () => {
                     <div className="book-image">
                         <img src={image} alt={title} />
                     </div>
-                    <p/>
                     <Link to={`books/${id}`} className="btn book-link">details</Link>
                 </article>
             ))}

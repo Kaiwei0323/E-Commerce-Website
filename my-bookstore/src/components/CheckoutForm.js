@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { BookContext } from "../context/books";
 import { CartContext } from "../context/cart";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { Link } from 'react-router-dom';
 
 const CARD_ELEMENT_OPTIONS = {
   style: {
@@ -82,9 +83,10 @@ const CheckoutForm = () => {
         </div>
       </div>
       <button type="submit" className="btn">
-        Submit Payment
+        <Link to="/thankyou">Submit Payment</Link>
       </button>
     </form>
+
   );
 };
 

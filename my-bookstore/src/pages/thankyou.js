@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 const thankyou = () => {
     return (
-        <>
-            <div className="thankyou">Order Successfully</div>
-        </>
+        <div>
+            <center><h3>Order Successfully</h3></center>
+        </div>
     )
 }
 
